@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>布衣世佳</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://qinshijia.github.io/"/>
+  <updated>2018-08-08T04:15:00.078Z</updated>
+  <id>https://qinshijia.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter之HTTP请求</title>
+    <link href="https://qinshijia.github.io/2018/08/06/Flutter%E4%B9%8BHTTP%E8%AF%B7%E6%B1%82/"/>
+    <id>https://qinshijia.github.io/2018/08/06/Flutter之HTTP请求/</id>
+    <published>2018-08-06T08:12:39.000Z</published>
+    <updated>2018-08-08T04:15:00.078Z</updated>
+    
+    <summary type="html">
+    
+      APP开发或多或少都要用到http网络请求，在Flutter中http请求的使用方式非常简单，只需在引入http库，设置url等必要参数后，调用`http.get()`或者`http.post()`方法即可。
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/categories/Flutter/"/>
+    
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/tags/Flutter/"/>
+    
+      <category term="学习" scheme="https://qinshijia.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter之扫盲篇</title>
+    <link href="https://qinshijia.github.io/2018/08/06/Flutter%E4%B9%8B%E6%89%AB%E7%9B%B2%E7%AF%87/"/>
+    <id>https://qinshijia.github.io/2018/08/06/Flutter之扫盲篇/</id>
+    <published>2018-08-06T08:12:39.000Z</published>
+    <updated>2018-08-08T03:30:57.091Z</updated>
+    
+    <summary type="html">
+    
+      Flutter是Google推出的跨平台SDK，同一份代码即可在Android和IOS系统上运行，使用Dart作为开发语言。2018年6月Flutter发布了首个预览版，到目前为止正式版本还未发布。Flutter是在GitHub上开源，SDK代码和相关支持库也在不断更新中，可以持续关注。
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/categories/Flutter/"/>
+    
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/tags/Flutter/"/>
+    
+      <category term="学习" scheme="https://qinshijia.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
