@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>Markdown使用介绍 | 布衣世佳</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '06bf312fea7545812ff68aee08debd1d';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Markdown使用介绍</h1><a id="logo" href="/.">布衣世佳</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Markdown使用介绍</h1><div class="post-meta">Aug 13, 2018<span> | </span><span class="category"><a href="/categories/博客/">博客</a></span></div><a class="disqus-comment-count" href="/2018/08/13/markdown-introduction/#vcomment"><span class="valine-comment-count" data-xid="/2018/08/13/markdown-introduction/"></span><span> 条评论</span></a><div class="post-content"><h2 id="Markdown简介"><a href="#Markdown简介" class="headerlink" title="Markdown简介"></a>Markdown简介</h2><p>Markdown是一种轻量级的标记语言，目标是实现易读易写。</p>
+<p>简单的语法规则，漂亮的显示效果，容易读写随意改，是Markdown的特点。使用Markdown写作，能让您专注于内容，不需要浪费大量时间去排版。很多博客、在线笔记等工具都支持Markdown格式的文档，例如GitHub、Stack Overflow、简书、为知笔记。</p>
+<p>下面会介绍常用的Markdown语法。</p>
+<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown中标题分为六级，在行首以 # 开头并空一格再写标题文字。# 的个数标题的级数，一级标题字体最大，六级标题字体最小。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure></p>
+<h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>段落没有标记，段落的前后应该有一个以上空行。段落不推荐使用缩进。</p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接标记是一个中括号和一个小括号连在一块，中括号内是要链接的文字，小括号是链接地址，例如<a href="#">这样</a>。链接可以是绝对地址，也可以是相对地址。<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com/</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>插入图片需要先保存好图片，然后再通过引入图片的方式显示。</p>
+<p>图片的标记是一个感叹号、中括号和小括号连在一起，中括号里是图片加载不出来时显示的文字，小括号里是图片的链接地址。</p>
+<p>下面这张图片的写法是：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Markdown图标</span>](<span class="link">https://d33wubrfki0l68.cloudfront.net/f1f475a6fda1c2c4be4cac04033db5c3293032b4/513a4/assets/images/markdown-mark-white.svg</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://d33wubrfki0l68.cloudfront.net/f1f475a6fda1c2c4be4cac04033db5c3293032b4/513a4/assets/images/markdown-mark-white.svg" alt="Markdown图标"></p>
+<h3 id="段内代码"><a href="#段内代码" class="headerlink" title="段内代码"></a>段内代码</h3><p>段内代码标记是由两个 ` 符号（键盘上制表符上面，1旁边的按键）组成，两个`中间是要显示的代码，例如这样 <code>Hello world!</code>。<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`Hello world!`</span><br></pre></td></tr></table></figure></p>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>代码块是在开头和结尾都以三个连续的 ` 符号组成，中间为显示的代码。怎么没有行号？那是Markdown解析后前端显示的问题，不是语法的问题。<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> <span class="built_in">text</span> = <span class="string">"Hello world!"</span>;</span><br><span class="line">System.out.<span class="built_in">print</span>(<span class="built_in">text</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在段落的开头使用 &gt; 符号即可，显示的效果如下：</p>
+<blockquote>
+<p>这是一段引用</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> 这是一段引用</span></span><br></pre></td></tr></table></figure>
+<h3 id="无序序列"><a href="#无序序列" class="headerlink" title="无序序列"></a>无序序列</h3><p>无序序列在行开头使用 * 或者 - 或者 + 即可。显示效果如下</p>
+<ul>
+<li>无序序列</li>
+</ul>
+<ul>
+<li>无序序列</li>
+</ul>
+<ul>
+<li>无序序列</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>无序序列</span><br><span class="line"><span class="bullet">- </span>无序序列</span><br><span class="line"><span class="bullet">+ </span>无序序列</span><br></pre></td></tr></table></figure>
+<h3 id="有序序列"><a href="#有序序列" class="headerlink" title="有序序列"></a>有序序列</h3><p>有序列表则使用数字接着一个英文句点，数字的大小顺序对显示的结果没有影响，显示结果会按照行的顺序重新编号。</p>
+<ol>
+<li>有序序列1</li>
+<li>有序序列2</li>
+<li>有序序列3</li>
+</ol>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 有序序列<span class="number">1</span></span><br><span class="line"><span class="number">1.</span> 有序序列<span class="number">2</span></span><br><span class="line"><span class="number">1.</span> 有序序列<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>表格是用符号 | 标记，在 | 之间的就是表格的内容。第一行是表头，第二行是控制表格显示方式，第三行以后是表格内容。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">靠左显示</th>
+<th style="text-align:center">居中显示</th>
+<th style="text-align:right">靠右显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">第二行使用符号 :-</td>
+<td style="text-align:center">第二行使用符号 :-:</td>
+<td style="text-align:right">第二行使用符号 -:</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">靠左显示</span>|<span class="string">居中显示</span>|<span class="string">靠右显示</span>|</span><br><span class="line">|<span class="string">:-</span>|<span class="string">:-:</span>|<span class="string">-:</span>|</span><br><span class="line">|<span class="string">第二行使用符号 :-</span>|<span class="string">第二行使用符号 :-:</span>|<span class="string">第二行使用符号 -:</span>|</span><br></pre></td></tr></table></figure>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>强调是在段内的 * 之间插入要强调的文字，一个*是斜体，连续两个 **是加粗，例如 <em>我想倾斜一下</em>， <strong>我想加粗一下</strong>。</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*我想倾斜一下*</span></span><br><span class="line">*<span class="strong">*我想加粗一下*</span><span class="strong">*</span></span><br></pre></td></tr></table></figure>
+<h2 id="Markdown工具推荐"><a href="#Markdown工具推荐" class="headerlink" title="Markdown工具推荐"></a>Markdown工具推荐</h2><p>Markdown 语法已经足够简单了，使用常用的文本编辑器就能完成写作。随着 Markdown 越来越流行，配套工具也丰富了起来，语法高亮、实时预览、图片粘贴等功能也很吸引人。</p>
+<p>这里推荐一款文本编辑器 Atom，它着丰富的插件库，在 Atom 的 File -&gt; settings -&gt; install中搜索相应插件然后安装即可，使用方法在搜索结果界面点进去都有介绍。 Markdown 相关的插件有以下这些：</p>
+<ul>
+<li>markdown-writer：语法高亮</li>
+<li>markdown-scroll-sync：编写的时候按了 Ctrl + Shift + M，之后能同步滚动预览</li>
+<li>markdown-image-assistant：截图之后直接按 Ctrl + V 粘贴</li>
+</ul>
+<p>其他工具可以看一下<a href="https://www.jeffdesign.net/blog/90/" target="_blank" rel="noopener">Markdown 在线编辑阅读器及应用收集</a>。</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://www.markdown.cn/" target="_blank" rel="noopener">Markdown 教程</a></p>
+</div><div class="tags"><a href="/tags/博客/">博客</a></div><div class="post-nav"><a class="next" href="/2018/08/09/build-blog/">博客搭建过程</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'huuoEBnT8rjJWI0JpHIteXwh-gzGzoHsz',
+  appKey:'IgFPmbD0TqtDawiS22bOjtTk',
+  placeholder:'Just so so',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/markdown-introduction/">Markdown使用介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/09/build-blog/">博客搭建过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/flutter-http/">Flutter之HTTP请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/flutter-introduction/">Flutter之扫盲篇</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://hexo.io/zh-cn/docs/" title="hexo文档" target="_blank">hexo文档</a><ul></ul><a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/" title="hexo安装教程" target="_blank">hexo安装教程</a><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="主题配置教程" target="_blank">主题配置教程</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">布衣世佳.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

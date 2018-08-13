@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qinshijia.github.io/"/>
-  <updated>2018-08-09T03:13:53.325Z</updated>
+  <updated>2018-08-13T07:10:04.561Z</updated>
   <id>https://qinshijia.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Markdown使用介绍</title>
+    <link href="https://qinshijia.github.io/2018/08/13/markdown-introduction/"/>
+    <id>https://qinshijia.github.io/2018/08/13/markdown-introduction/</id>
+    <published>2018-08-13T07:07:04.000Z</published>
+    <updated>2018-08-13T07:10:04.561Z</updated>
+    
+    <summary type="html">
+    
+      Markdown是一种轻量级的标记语言，目标是实现易读易写。简单的语法规则，漂亮的显示效果，容易读写随意改，使用Markdown写作，能让您专注于内容，不需要浪费大量时间去排版。很多博客、在线笔记等工具都支持Markdown格式的文档，例如GitHub、Stack Overflow、简书、为知笔记。
+    
+    </summary>
+    
+      <category term="博客" scheme="https://qinshijia.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="https://qinshijia.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客搭建过程</title>
     <link href="https://qinshijia.github.io/2018/08/09/build-blog/"/>
     <id>https://qinshijia.github.io/2018/08/09/build-blog/</id>
     <published>2018-08-09T02:57:20.000Z</published>
-    <updated>2018-08-09T03:13:53.325Z</updated>
+    <updated>2018-08-13T07:10:31.721Z</updated>
     
     <summary type="html">
     
@@ -60,8 +80,8 @@
   
   <entry>
     <title>Flutter之扫盲篇</title>
-    <link href="https://qinshijia.github.io/2018/08/06/flutter-intruduction/"/>
-    <id>https://qinshijia.github.io/2018/08/06/flutter-intruduction/</id>
+    <link href="https://qinshijia.github.io/2018/08/06/flutter-introduction/"/>
+    <id>https://qinshijia.github.io/2018/08/06/flutter-introduction/</id>
     <published>2018-08-06T08:12:39.000Z</published>
     <updated>2018-08-08T03:30:57.091Z</updated>
     
