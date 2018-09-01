@@ -22,7 +22,7 @@ description: 记录一下博客网站的搭建过程，使用 Github 提供的 G
 
 ## 建立GitHub Pages仓库
 
-建立 [GitHub Pages](https://pages.github.com/) 仓库，首先要有 GitHub 账号，然后在 GitHub 上建立一个命名为 [你GitHub用户名].github.io的私有仓库。需要注意的是，仓库的命名必须为你GitHub的用户名，否则将不生效，就不能通过 `https://[你GitHub用户名].github.io` 来访问。
+建立 [GitHub Pages](https://pages.github.com/) 仓库，首先要有 GitHub 账号，然后在 GitHub 上建立一个命名为 [你GitHub用户名].github.io的仓库。需要注意的是，仓库的命名必须为你GitHub的用户名，否则将不生效，就不能通过 `https://[你GitHub用户名].github.io` 来访问。
 
 官方教程点击[这里](https://pages.github.com/)。
 
