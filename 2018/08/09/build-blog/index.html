@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>博客搭建过程 | 布衣世佳</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '06bf312fea7545812ff68aee08debd1d';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">博客搭建过程</h1><a id="logo" href="/.">布衣世佳</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">博客搭建过程</h1><div class="post-meta">Aug 9, 2018<span> | </span><span class="category"><a href="/categories/博客/">博客</a></span></div><a class="disqus-comment-count" href="/2018/08/09/build-blog/#vcomment"><span class="valine-comment-count" data-xid="/2018/08/09/build-blog/"></span><span> 条评论</span></a><div class="post-content"><p>记录一下博客网站的搭建过程，使用 Github 提供的 GitHub Pages + Hexo 实现。GitHub Pages 是 GitHub 提供的静态网页服务，文件存储在 GitHub 仓库中，可以结合 Jekyll、Hexo 等博客框架，快速的部署博客网站，同时还可以绑定个人域名，成为你的专属网站。Hexo 是一个快速、简洁且高效的博客框架，文档清晰，插件、主题丰富，使用 Makedown 解析文章，生成静态网页。使用 GitHub Pages + Hexo 即可快速部署漂亮的博客，让您专注博客内容。</p>
+<p>博客的搭建过程参考了官方教程和一些网上的教程，“不重复造轮子”，我不再详细描写具体的配置过程，而是直接贴出教程的链接，方便查阅。</p>
+<p>搭建过程主要以下几个步骤：</p>
+<ul>
+<li>建立 GitHub Pages 仓库</li>
+<li>安装、部署 Hexo</li>
+<li>配置主题</li>
+<li>安装插件</li>
+<li>编写博客</li>
+</ul>
+<p>在贴出的教程链接中，会有交叉的地方，请注意辨别。</p>
+<h2 id="建立GitHub-Pages仓库"><a href="#建立GitHub-Pages仓库" class="headerlink" title="建立GitHub Pages仓库"></a>建立GitHub Pages仓库</h2><p>建立 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 仓库，首先要有 GitHub 账号，然后在 GitHub 上建立一个命名为 [你GitHub用户名].github.io的仓库。需要注意的是，仓库的命名必须为你GitHub的用户名，否则将不生效，就不能通过 <code>https://[你GitHub用户名].github.io</code> 来访问。</p>
+<p>官方教程点击<a href="https://pages.github.com/" target="_blank" rel="noopener">这里</a>。</p>
+<p>建好仓库之后，在仓库里面上传一个 <code>index.html</code> 文件，然后通过 <code>https://[你GitHub用户名].github.io</code> 来访问，可以看到<code>index.html</code>的内容，就说明已经建立好。上传后直接访问可能会出现404，等几分钟就好了。确认仓库已经建好，用来测试的 <code>index.html</code> 文件就可以删除了。</p>
+<p>在搭建博客、编写博客的过程中，基本都用不上 Git 命令，但博客是基于 GitHub 的仓库实现的，还是推荐了解一下 Git 命令，方便解决各种问题。这里推荐一个简单清晰的git教程：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰Git教程</a>。</p>
+<h2 id="安装、部署Hexo"><a href="#安装、部署Hexo" class="headerlink" title="安装、部署Hexo"></a>安装、部署Hexo</h2><p>Hexo 是基于 node.js 实现的，所以需要在自己电脑上安装 node.js，Hexo 没有可视化界面，需要使用命令行来完成各种功能，为了便于使用命令行，所以还要安装 Fit Bash。有了 node.js 和 Git Bash 之后，就可以愉快的在上面敲命令行安装、部署 Hexo 了。</p>
+<p>安装的方法官方教程里都有，点击<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">这里</a>，官方教程比较全面，也会比较繁琐。</p>
+<p>还有一个比较简单的教程，点击<a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/" target="_blank" rel="noopener">这里</a>，里面还会教你怎么新建 GitHub 仓库，可以直接跳过，使用上面建好的就可以了。</p>
+<p>到这里，部署 Hexo，并发布到 GitHub 仓库之后，博客就已经搭建完了。</p>
+<p>不过，你可能还不太满意，界面不漂亮、没有站内搜索、没有RSS…</p>
+<p>界面不漂亮？换个主题吧。</p>
+<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>好看的主题都在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">这里</a>，点击进去预览，然后根据主题的配置方法配置即可。</p>
+<p>我使用的主题是 <a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="noopener">maupassant</a>，大道至简，里面有详细的配置方法，按需配置即可。</p>
+<p>本地配置好之后，使用 Hexo 发布命令 <code>hexo deploy</code>，就可以在 <code>https://[你GitHub用户名].github.io</code> 上看到效果。</p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>想要站内搜索，推荐这个插件：<a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></p>
+<p>想要RSS，推荐这个插件：<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a></p>
+<p>还想安装其他的？都在<a href="https://hexo.io/plugins/" target="_blank" rel="noopener">这里</a>。</p>
+<p>漂亮的博客网站已经建好了，开始书写内容吧。</p>
+<h2 id="编写博客"><a href="#编写博客" class="headerlink" title="编写博客"></a>编写博客</h2><p>Hexo 是将 Markdown 文件解析为静态网页，所以博客也需要使用 Markdown 格式书写。Markdown 的目标是实现「易读易写」，所以使用起来很简单，这里是<a href="http://www.markdown.cn/" target="_blank" rel="noopener">官方教程</a>。</p>
+<p>Markdown 的编辑器有很多，我使用的是 Atom，加上下面这些插件，即可方便的书写博客。</p>
+<ul>
+<li>markdown-writer：高亮显 示Markdown</li>
+<li>markdown-scroll-sync：编写的时候按了 <code>Ctrl + Shift + M</code>，之后能同步滚动预览</li>
+<li>markdown-image-assistant：截图之后直接按 <code>Ctrl + V</code> 粘贴</li>
+</ul>
+<p>在 Atom 的 <code>File</code> -&gt; <code>settings</code> -&gt; <code>install</code>中搜索相应插件然后安装即可，使用方法在搜索结果界面点进去都有介绍。</p>
+<p>好了，专注内容吧。</p>
+</div><div class="tags"><a href="/tags/博客/">博客</a></div><div class="post-nav"><a class="pre" href="/2018/08/13/markdown-introduction/">Markdown使用介绍</a><a class="next" href="/2018/08/06/flutter-http/">Flutter之HTTP请求</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'huuoEBnT8rjJWI0JpHIteXwh-gzGzoHsz',
+  appKey:'IgFPmbD0TqtDawiS22bOjtTk',
+  placeholder:'Just so so',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RxJava/">RxJava</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mqtt/">mqtt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/mqtt/" style="font-size: 15px;">mqtt</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/RxJava/" style="font-size: 15px;">RxJava</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/rxjava-intro/">RxJava 响应式编程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/01/mqtt-introduction/">MQTT--普遍用于物联网、消息推送的轻量级消息传输协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/markdown-introduction/">Markdown使用介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/09/build-blog/">博客搭建过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/flutter-http/">Flutter之HTTP请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/flutter-introduction/">Flutter之扫盲篇</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://hexo.io/zh-cn/docs/" title="hexo文档" target="_blank">hexo文档</a><ul></ul><a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/" title="hexo安装教程" target="_blank">hexo安装教程</a><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="主题配置教程" target="_blank">主题配置教程</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">布衣世佳.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>布衣世佳</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://qinshijia.github.io/"/>
+  <updated>2018-09-07T07:28:47.560Z</updated>
+  <id>https://qinshijia.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RxJava 响应式编程</title>
+    <link href="https://qinshijia.github.io/2018/09/07/rxjava-intro/"/>
+    <id>https://qinshijia.github.io/2018/09/07/rxjava-intro/</id>
+    <published>2018-09-07T07:12:11.000Z</published>
+    <updated>2018-09-07T07:28:47.560Z</updated>
+    
+    <summary type="html">
+    
+      传统的异步编程一般用回调函数的方式来完成更新操作，在遇到嵌套异步任务（例如嵌套的网络请求），往往会导致逻辑复杂、代码晦涩难懂、容易出现各种各样bug。多个层级的嵌套回调，很容易导致回调地狱。RxJava是基于事件流的响应式编程，就能很好的解决这种问题。
+    
+    </summary>
+    
+      <category term="RxJava" scheme="https://qinshijia.github.io/categories/RxJava/"/>
+    
+    
+      <category term="RxJava" scheme="https://qinshijia.github.io/tags/RxJava/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MQTT--普遍用于物联网、消息推送的轻量级消息传输协议</title>
+    <link href="https://qinshijia.github.io/2018/09/01/mqtt-introduction/"/>
+    <id>https://qinshijia.github.io/2018/09/01/mqtt-introduction/</id>
+    <published>2018-09-01T05:03:46.000Z</published>
+    <updated>2018-09-07T07:01:33.521Z</updated>
+    
+    <summary type="html">
+    
+      MQTT是一个基于客户端-服务器的消息发布/订阅传输协议。针对高延迟或不可靠的网络进行了优化，同时还确保了网络传输的可靠性。适合用于带宽小、内存小、处理能力有限、网络不可靠的环境。具有这些特点的MQTT很适合用于嵌入式设备，已普遍用于智能设备、医疗、智能汽车等领域。在Android、IOS等移动开发中，普遍作为消息推送的解决方案。
+    
+    </summary>
+    
+      <category term="mqtt" scheme="https://qinshijia.github.io/categories/mqtt/"/>
+    
+    
+      <category term="mqtt" scheme="https://qinshijia.github.io/tags/mqtt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown使用介绍</title>
+    <link href="https://qinshijia.github.io/2018/08/13/markdown-introduction/"/>
+    <id>https://qinshijia.github.io/2018/08/13/markdown-introduction/</id>
+    <published>2018-08-13T07:07:04.000Z</published>
+    <updated>2018-09-07T07:01:33.519Z</updated>
+    
+    <summary type="html">
+    
+      Markdown是一种轻量级的标记语言，目标是实现易读易写。简单的语法规则，漂亮的显示效果，容易读写随意改，使用Markdown写作，能让您专注于内容，不需要浪费大量时间去排版。很多博客、在线笔记等工具都支持Markdown格式的文档，例如GitHub、Stack Overflow、简书、为知笔记。
+    
+    </summary>
+    
+      <category term="博客" scheme="https://qinshijia.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="https://qinshijia.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客搭建过程</title>
+    <link href="https://qinshijia.github.io/2018/08/09/build-blog/"/>
+    <id>https://qinshijia.github.io/2018/08/09/build-blog/</id>
+    <published>2018-08-09T02:57:20.000Z</published>
+    <updated>2018-09-07T07:01:33.517Z</updated>
+    
+    <summary type="html">
+    
+      记录一下博客网站的搭建过程，使用 Github 提供的 GitHub Pages + Hexo 实现。GitHub Pages 是 GitHub 提供的静态网页服务，文件存储在 GitHub 仓库中，可以结合 Jekyll、Hexo 等博客框架，快速的部署博客网站，同时还可以绑定个人域名，成为你的专属网站。Hexo 是一个快速、简洁且高效的博客框架，文档清晰，插件、主题丰富，使用 Makedown 解析文章，生成静态网页。使用 GitHub Pages + Hexo 即可快速部署漂亮的博客，让您专注博客内容。
+    
+    </summary>
+    
+      <category term="博客" scheme="https://qinshijia.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="https://qinshijia.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter之HTTP请求</title>
+    <link href="https://qinshijia.github.io/2018/08/06/flutter-http/"/>
+    <id>https://qinshijia.github.io/2018/08/06/flutter-http/</id>
+    <published>2018-08-06T08:12:39.000Z</published>
+    <updated>2018-09-07T07:01:33.514Z</updated>
+    
+    <summary type="html">
+    
+      APP开发或多或少都要用到http网络请求，在Flutter中http请求的使用方式非常简单，只需在引入http库，设置url等必要参数后，调用`http.get()`或者`http.post()`方法即可。
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/categories/Flutter/"/>
+    
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/tags/Flutter/"/>
+    
+      <category term="学习" scheme="https://qinshijia.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flutter之扫盲篇</title>
+    <link href="https://qinshijia.github.io/2018/08/06/flutter-introduction/"/>
+    <id>https://qinshijia.github.io/2018/08/06/flutter-introduction/</id>
+    <published>2018-08-06T08:12:39.000Z</published>
+    <updated>2018-09-07T07:01:33.516Z</updated>
+    
+    <summary type="html">
+    
+      Flutter是Google推出的跨平台SDK，同一份代码即可在Android和IOS系统上运行，使用Dart作为开发语言。2018年6月Flutter发布了首个预览版，到目前为止正式版本还未发布。Flutter是在GitHub上开源，SDK代码和相关支持库也在不断更新中，可以持续关注。
+    
+    </summary>
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/categories/Flutter/"/>
+    
+    
+      <category term="Flutter" scheme="https://qinshijia.github.io/tags/Flutter/"/>
+    
+      <category term="学习" scheme="https://qinshijia.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>MQTT--普遍用于物联网、消息推送的轻量级消息传输协议 | 布衣世佳</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = 'https://hm.baidu.com/hm.js?' + '06bf312fea7545812ff68aee08debd1d';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MQTT--普遍用于物联网、消息推送的轻量级消息传输协议</h1><a id="logo" href="/.">布衣世佳</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MQTT--普遍用于物联网、消息推送的轻量级消息传输协议</h1><div class="post-meta">Sep 1, 2018<span> | </span><span class="category"><a href="/categories/mqtt/">mqtt</a></span></div><a class="disqus-comment-count" href="/2018/09/01/mqtt-introduction/#vcomment"><span class="valine-comment-count" data-xid="/2018/09/01/mqtt-introduction/"></span><span> 条评论</span></a><div class="post-content"><h2 id="MQTT是什么"><a href="#MQTT是什么" class="headerlink" title="MQTT是什么"></a>MQTT是什么</h2><p>MQTT是一个基于客户端-服务器的消息发布/订阅传输协议。针对高延迟或不可靠的网络进行了优化，同时还确保了网络传输的可靠性。适合用于带宽小、内存小、处理能力有限、网络不可靠的环境。具有这些特点的MQTT很适合用于嵌入式设备，已普遍用于智能设备、医疗、智能汽车等领域。在Android、IOS等移动开发中，普遍作为消息推送的解决方案。</p>
+<h2 id="MQTT有谁在用"><a href="#MQTT有谁在用" class="headerlink" title="MQTT有谁在用"></a>MQTT有谁在用</h2><ul>
+<li><strong>阿里巴巴</strong> ：阿里云提供的IOT解决方案：<a href="https://www.aliyun.com/aliware/scenarios/case1" target="_blank" rel="noopener">https://www.aliyun.com/aliware/scenarios/case1</a></li>
+<li><strong>Facebook Messenger</strong> ：Facebook出品的聊天工具</li>
+<li><strong>EMQ</strong> ：百万级分布式开源物联网MQTT消息服务器：<a href="http://www.emqtt.com/" target="_blank" rel="noopener">http://www.emqtt.com/</a></li>
+<li><strong>云智易</strong> ：云智易的设备是基于MQTT协议传输数据从而实现设备数据的上报与控制</li>
+<li><strong>网易云信</strong> ：其核心也是MQTT来实现消息推送的</li>
+</ul>
+<p>还有更多的使用例子：<a href="https://github.com/mqtt/mqtt.github.io/wiki/Example-Uses" target="_blank" rel="noopener">https://github.com/mqtt/mqtt.github.io/wiki/Example-Uses</a></p>
+<h2 id="MQTT是怎么工作的"><a href="#MQTT是怎么工作的" class="headerlink" title="MQTT是怎么工作的"></a>MQTT是怎么工作的</h2><p>MQTT采用的是发布/订阅的方式通信，客户端（Client）发布消息，经由代理（Broker）转发给订阅者（也是客户端）。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2018/png/164396/1535701989397-7972015f-ed6d-4184-8d8d-69926e743f72.png" alt="发布/订阅模式"></p>
+<blockquote>
+<p>村民：狼来了，就喊救命，我来赶跑它。<br>小男孩：知道了<br>狼来了。<br>小男孩：狼来了！狼来了！救命啊！<br>村民过来把狼赶跑了。</p>
+</blockquote>
+<p>订阅者（村民）通过主题（狼来了）向代理（小男孩）订阅消息，当发布者（狼）发布该主题的消息（狼来了）时，代理就将消息转发给此消息主题的订阅者（小男孩通知村民），订阅者就可以做出响应（把狼赶跑了）。订阅者和发布者都属于客户端，可以是一个设备或者一个应用程序。每个客户端都拥有唯一的ClientID。</p>
+<p>MQTT底层采用的是TCP/IP实现，提供三种服务质量（QoS）：</p>
+<ul>
+<li><strong>至多一次</strong> ：消息发布成功与否完全依赖底层网络，消息可能会丢失。适用于要求不高的数据。</li>
+<li><strong>至少一次</strong> ：消息会确保到达，但是可能会重复。</li>
+<li><strong>只有一次</strong> ：消息确保到达一次，可用于数据要求比较高的环境，如计费系统。</li>
+</ul>
+<h2 id="MQTT的一些术语"><a href="#MQTT的一些术语" class="headerlink" title="MQTT的一些术语"></a>MQTT的一些术语</h2><p><strong>客户端 Client</strong><br>使用MQTT的程序或设备。客户端总是通过网络连接到服务端。它可以</p>
+<ul>
+<li>发布应用消息给其它相关的客户端。</li>
+<li>订阅以请求接受相关的应用消息。</li>
+<li>取消订阅以移除接受应用消息的请求。</li>
+<li>从服务端断开连接。</li>
+</ul>
+<p><strong>服务端 Server</strong><br>一个程序或设备，作为发送消息的客户端和请求订阅的客户端之间的中介。服务端</p>
+<ul>
+<li>接受来自客户端的网络连接。</li>
+<li>接受客户端发布的应用消息。</li>
+<li>处理客户端的订阅和取消订阅请求。</li>
+<li>转发应用消息给符合条件的已订阅客户端。</li>
+</ul>
+<p><strong>订阅 Subscription</strong><br>订阅包含一个主题过滤器（Topic Filter）和一个最大的服务质量（QoS）等级。订阅与单个会话（Session）关联。会话可以包含多于一个的订阅。会话的每个订阅都有一个不同的主题过滤器。</p>
+<p><strong>主题名 Topic Name</strong><br>附加在应用消息上的一个标签，服务端已知且与订阅匹配。服务端发送应用消息的一个副本给每一个匹配的客户端订阅。</p>
+<p><strong>主题过滤器 Topic Filter</strong><br>订阅中包含的一个表达式，用于表示相关的一个或多个主题。主题过滤器可以使用通配符。</p>
+<p><strong>会话 Session</strong><br>客户端和服务端之间的状态交互。一些会话持续时长与网络连接一样，另一些可以在客户端和服务端的多个连续网络连接间扩展。</p>
+<p><strong>控制报文 MQTT Control Packet</strong><br>通过网络连接发送的信息数据包。MQTT规范定义了十四种不同类型的控制报文，其中一个（PUBLISH报文）用于传输应用消息。</p>
+<h2 id="MQTT的怎么用？"><a href="#MQTT的怎么用？" class="headerlink" title="MQTT的怎么用？"></a>MQTT的怎么用？</h2><p>首先，你要有个服务器，然后在服务器上部署MQTT环境，具体方法这里就不展开讲了。<br>只想试试就不用自己部署服务器了，有很多服务器提供免费测试使用，<a href="https://github.com/mqtt/mqtt.github.io/wiki/public_brokers" target="_blank" rel="noopener">public_brokers</a>。<br>示例Android工程在这里：<a href="https://github.com/bytehala/android-mqtt-quickstart" target="_blank" rel="noopener">https://github.com/bytehala/android-mqtt-quickstart</a><br>MQTT协议中定义了一些方法（也被称为动作），来于表示对确定资源所进行操作。这个资源可以代表预先存在的数据或动态生成数据，这取决于服务器的实现。通常来说，资源指服务器上的文件或输出。主要方法有：</p>
+<ul>
+<li>Connect。等待与服务器建立连接。</li>
+<li>Disconnect。等待MQTT客户端完成所做的工作，并与服务器断开TCP/IP会话。</li>
+<li>Subscribe。等待完成订阅。</li>
+<li>UnSubscribe。等待服务器取消客户端的一个或多个topics订阅。</li>
+<li>Publish。MQTT客户端发送消息请求，发送完成后返回应用程序线程。</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.ibm.com/developerworks/mydeveloperworks/blogs/aimsupport/entry/what_is_mqtt_and_how_does_it_work_with_websphere_mq?lang=en" target="_blank" rel="noopener">What is mqtt？</a></p>
+<p><a href="https://github.com/mqtt/mqtt.github.io/wiki" target="_blank" rel="noopener">MQTT wiki</a></p>
+<p><a href="https://mcxiaoke.gitbooks.io/mqtt-cn/content/mqtt/01-Introduction.html" target="_blank" rel="noopener">MQTT协议中文版</a></p>
+</div><div class="tags"><a href="/tags/mqtt/">mqtt</a></div><div class="post-nav"><a class="pre" href="/2018/09/07/rxjava-intro/">RxJava 响应式编程</a><a class="next" href="/2018/08/13/markdown-introduction/">Markdown使用介绍</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'huuoEBnT8rjJWI0JpHIteXwh-gzGzoHsz',
+  appKey:'IgFPmbD0TqtDawiS22bOjtTk',
+  placeholder:'Just so so',
+  avatar:'retro',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Flutter/">Flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RxJava/">RxJava</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/mqtt/">mqtt</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/mqtt/" style="font-size: 15px;">mqtt</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/RxJava/" style="font-size: 15px;">RxJava</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/rxjava-intro/">RxJava 响应式编程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/01/mqtt-introduction/">MQTT--普遍用于物联网、消息推送的轻量级消息传输协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/markdown-introduction/">Markdown使用介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/09/build-blog/">博客搭建过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/flutter-http/">Flutter之HTTP请求</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/flutter-introduction/">Flutter之扫盲篇</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://hexo.io/zh-cn/docs/" title="hexo文档" target="_blank">hexo文档</a><ul></ul><a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/" title="hexo安装教程" target="_blank">hexo安装教程</a><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="主题配置教程" target="_blank">主题配置教程</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">布衣世佳.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
