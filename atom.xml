@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://qinshijia.github.io/"/>
-  <updated>2018-09-07T07:28:47.560Z</updated>
+  <updated>2018-10-25T11:33:49.787Z</updated>
   <id>https://qinshijia.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RxJava debounce操作符防止界面刷新过度</title>
+    <link href="https://qinshijia.github.io/2018/10/25/rxjava-debounce/"/>
+    <id>https://qinshijia.github.io/2018/10/25/rxjava-debounce/</id>
+    <published>2018-10-25T07:12:11.000Z</published>
+    <updated>2018-10-25T11:33:49.787Z</updated>
+    
+    <summary type="html">
+    
+      有些场景下APP需要根据数据实时刷新界面，数据刷新过快，界面跟着刷新可能会出现界面卡顿的问题。特别是在界面显示的元素比较多绘制时间比较长、刷新界面需要执行动画等情况下，就会导致界面卡顿。刷新过快的时候，中间的一些数据是可以过滤掉，只要根据最后一个数据刷新界面就可以了。本文介绍如何通过使用同一个Observable发射事件并使用debounce过滤掉发射速率过快的数据项。
+    
+    </summary>
+    
+      <category term="RxJava" scheme="https://qinshijia.github.io/categories/RxJava/"/>
+    
+    
+      <category term="RxJava" scheme="https://qinshijia.github.io/tags/RxJava/"/>
+    
+  </entry>
   
   <entry>
     <title>RxJava 响应式编程</title>
